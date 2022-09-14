@@ -1,0 +1,609 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{69333355-0000-482C-8368-A587A46F6E14}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication1</RootNamespace>
+    <AssemblyName>Home</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge">
+      <HintPath>..\..\..\SDPO\SDPO - 複製\Icon1\map-icons\新增資料夾 (3)\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Controls">
+      <HintPath>..\..\..\SDPO\SDPO - 複製\Icon1\map-icons\新增資料夾 (3)\AForge.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.DebuggerVisualizers %282010%29">
+      <HintPath>..\..\..\SDPO\SDPO - 複製\Icon1\map-icons\新增資料夾 (3)\AForge.DebuggerVisualizers (2010).dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Fuzzy">
+      <HintPath>..\..\..\SDPO\SDPO - 複製\Icon1\map-icons\新增資料夾 (3)\AForge.Fuzzy.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Genetic">
+      <HintPath>..\..\..\SDPO\SDPO - 複製\Icon1\map-icons\新增資料夾 (3)\AForge.Genetic.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging">
+      <HintPath>..\..\..\SDPO\SDPO - 複製\Icon1\map-icons\新增資料夾 (3)\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging.Formats">
+      <HintPath>..\..\..\SDPO\SDPO - 複製\Icon1\map-icons\新增資料夾 (3)\AForge.Imaging.Formats.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging.IPPrototyper">
+      <HintPath>..\..\..\SDPO\SDPO - 複製\Icon1\map-icons\新增資料夾 (3)\AForge.Imaging.IPPrototyper.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.MachineLearning">
+      <HintPath>..\..\..\SDPO\SDPO - 複製\Icon1\map-icons\新增資料夾 (3)\AForge.MachineLearning.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math">
+      <HintPath>..\..\..\SDPO\SDPO - 複製\Icon1\map-icons\新增資料夾 (3)\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Neuro">
+      <HintPath>..\..\..\SDPO\SDPO - 複製\Icon1\map-icons\新增資料夾 (3)\AForge.Neuro.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Robotics.Lego">
+      <HintPath>..\..\..\SDPO\SDPO - 複製\Icon1\map-icons\新增資料夾 (3)\AForge.Robotics.Lego.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Robotics.Surveyor">
+      <HintPath>..\..\..\SDPO\SDPO - 複製\Icon1\map-icons\新增資料夾 (3)\AForge.Robotics.Surveyor.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Robotics.TeRK">
+      <HintPath>..\..\..\SDPO\SDPO - 複製\Icon1\map-icons\新增資料夾 (3)\AForge.Robotics.TeRK.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video">
+      <HintPath>..\..\..\SDPO\SDPO - 複製\Icon1\map-icons\新增資料夾 (2)\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>..\..\..\SDPO\SDPO - 複製\Icon1\map-icons\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="BarcodeLib.BarcodeReader">
+      <HintPath>..\..\..\SDPO\SDPO - 複製\Icon1\map-icons\新增資料夾 (3)\BarcodeLib.BarcodeReader.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.4">
+      <HintPath>..\..\..\Bunifu .NET UI V1.4\Bunifu_UI_v1.4.dll</HintPath>
+    </Reference>
+    <Reference Include="CSkin">
+      <HintPath>..\..\..\CSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MaterialSkin">
+      <HintPath>..\..\..\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroSuite">
+      <HintPath>..\..\..\MetroSuite.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.Entity.6.9.9\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Fabric.Plugin, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Fabric.6.9.9\lib\net45\MySql.Fabric.Plugin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SplashScreen, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SplashScreen.Winforms.1.0.0\lib\SplashScreen.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Zen.Barcode.Core, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b5ae55aa76d2d9de, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zen.Barcode.Rendering.Framework.3.1.10729.1\lib\Zen.Barcode.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="zxing">
+      <HintPath>..\..\..\SDPO\SDPO - 複製\Icon1\map-icons\zxing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="2.Designer.cs">
+      <DependentUpon>2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AboutINformation_UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AboutINformation_UI.Designer.cs">
+      <DependentUpon>AboutINformation_UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BMI_UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BMI_UI.Designer.cs">
+      <DependentUpon>BMI_UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BMR_UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BMR_UI.Designer.cs">
+      <DependentUpon>BMR_UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Camera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Camera.Designer.cs">
+      <DependentUpon>Camera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="charity.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChBMIR_UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChBMIR_UI.Designer.cs">
+      <DependentUpon>ChBMIR_UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="country.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Drink.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drink.Designer.cs">
+      <DependentUpon>Drink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Energy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Energy.Designer.cs">
+      <DependentUpon>Energy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="event.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="eventtype.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPwd.Designer.cs">
+      <DependentUpon>ForgotPwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Conordinator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Conordinator.Designer.cs">
+      <DependentUpon>Conordinator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gender.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage_ui.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HomePage_ui.Designer.cs">
+      <DependentUpon>HomePage_ui.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HowLongUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HowLongUI.Designer.cs">
+      <DependentUpon>HowLongUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listParenl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="listParenl.Designer.cs">
+      <DependentUpon>listParenl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoadingData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadingData.Designer.cs">
+      <DependentUpon>LoadingData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login1.Designer.cs">
+      <DependentUpon>Login1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginUI1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LoginUI1.Designer.cs">
+      <DependentUpon>LoginUI1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Management.Designer.cs">
+      <DependentUpon>Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Map21UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Map21UI.Designer.cs">
+      <DependentUpon>Map21UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Map42UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Map42UI.Designer.cs">
+      <DependentUpon>Map42UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Map5UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Map5UI.Designer.cs">
+      <DependentUpon>Map5UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="marathon.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="NewPwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPwd.Designer.cs">
+      <DependentUpon>NewPwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="racekitoption.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReadQR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReadQR.Designer.cs">
+      <DependentUpon>ReadQR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegiserU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegiserU.Designer.cs">
+      <DependentUpon>RegiserU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Medical.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Medical.Designer.cs">
+      <DependentUpon>Medical.cs</DependentUpon>
+    </Compile>
+    <Compile Include="registration.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="registrationevent.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="registrationstatus.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="role.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="runner.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SaveData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaveData.Designer.cs">
+      <DependentUpon>SaveData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sendEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sendEmail.Designer.cs">
+      <DependentUpon>sendEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SponsorContorUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SponsorContorUI.Designer.cs">
+      <DependentUpon>SponsorContorUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sponsorship.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SQR.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SQR.Designer.cs">
+      <DependentUpon>SQR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestBQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestBQ.Designer.cs">
+      <DependentUpon>TestBQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl2.Designer.cs">
+      <DependentUpon>UserControl2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="volunteer.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Voluteer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Voluteer.Designer.cs">
+      <DependentUpon>Voluteer.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="2.resx">
+      <DependentUpon>2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AboutINformation_UI.resx">
+      <DependentUpon>AboutINformation_UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BMI_UI.resx">
+      <DependentUpon>BMI_UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BMR_UI.resx">
+      <DependentUpon>BMR_UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Camera.resx">
+      <DependentUpon>Camera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChBMIR_UI.resx">
+      <DependentUpon>ChBMIR_UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Conordinator.resx">
+      <DependentUpon>Conordinator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drink.resx">
+      <DependentUpon>Drink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Energy.resx">
+      <DependentUpon>Energy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPwd.resx">
+      <DependentUpon>ForgotPwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage_ui.resx">
+      <DependentUpon>HomePage_ui.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HowLongUI.resx">
+      <DependentUpon>HowLongUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listParenl.resx">
+      <DependentUpon>listParenl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadingData.resx">
+      <DependentUpon>LoadingData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login1.resx">
+      <DependentUpon>Login1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginUI1.resx">
+      <DependentUpon>LoginUI1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management.resx">
+      <DependentUpon>Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Map21UI.resx">
+      <DependentUpon>Map21UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Map42UI.resx">
+      <DependentUpon>Map42UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Map5UI.resx">
+      <DependentUpon>Map5UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPwd.resx">
+      <DependentUpon>NewPwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ReadQR.resx">
+      <DependentUpon>ReadQR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegiserU.resx">
+      <DependentUpon>RegiserU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Medical.resx">
+      <DependentUpon>Medical.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaveData.resx">
+      <DependentUpon>SaveData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sendEmail.resx">
+      <DependentUpon>sendEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SponsorContorUI.resx">
+      <DependentUpon>SponsorContorUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SQR.resx">
+      <DependentUpon>SQR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestBQ.resx">
+      <DependentUpon>TestBQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl2.resx">
+      <DependentUpon>UserControl2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Voluteer.resx">
+      <DependentUpon>Voluteer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MetroFramework.txt" />
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
